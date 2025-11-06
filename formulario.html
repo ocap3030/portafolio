@@ -3,362 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Validación</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title>Formulario de Contacto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- NAV-BAR -->
-<style>
-    .main-nav {
-        background-color: #333;
-        padding: 10px 0;
-        margin-bottom: 30px;
-        width: 100%;
-    }
-    .main-nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-    }
-    .main-nav li {
-        margin: 0 15px;
-    }
-    .main-nav a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        padding: 5px 10px;
-        border-radius: 4px;
-        transition: background-color 0.3s;
-    }
-    .main-nav a:hover, .main-nav a.active {
-        background-color: #007bff;
-    }
-</style>
-<nav class="main-nav">
-    <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="mensajes.html">Ver Mensajes</a></li>
-        <li><a href="formulario.html" class="active">Formulario JS</a></li>
-        <li><a href="contacto.html">Contacto PHP</a></li>
-    </ul>
-</nav>
-<!-- FIN NAV-BAR -->
-    <div class="form-container">
-        <h1>Formulario de Registro</h1>
-        <form id="registroForm" novalidate>
-            <!-- Campo Nombre Completo -->
-            <div class="form-group">
-                <label for="nombre">Nombre completo *</label>
-                <input 
-                    type="text" 
-                    id="nombre" 
-                    name="nombre" 
-                    required
-                    aria-describedby="nombre-error"
-                    aria-invalid="false"
-                >
-                <div id="nombre-error" class="error-message" role="alert"></div>
-            </div>
+
+    <div class="container" style="max-width: 600px; margin-top: 4rem;">
+        <article class="card">
+            <h1 style="text-align: center;">Formulario de Contacto</h1>
+            <p style="text-align: center; margin-bottom: 2rem;">Envíame un mensaje y la información será procesada por el servidor PHP.</p>
+
+            <!-- 
+                El formulario apunta al script PHP que se ejecuta en el servidor local.
+                Usa el método POST para enviar los datos de forma segura.
+            -->
+            <form action="http://localhost:8000/procesar_formulario.php" method="POST">
+                
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label for="nombre" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" required style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 8px;">
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label for="correo" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Correo Electrónico</label>
+                    <input type="email" id="correo" name="correo" required style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 8px;">
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label for="celular" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Celular (Opcional)</label>
+                    <input type="tel" id="celular" name="celular" style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 8px;">
+                </div>
+
+                <div class="form-group" style="margin-bottom: 2rem;">
+                    <label for="mensaje" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 8px; resize: vertical;"></textarea>
+                </div>
+                
+                <button type="submit" class="btn-primary" style="width: 100%; padding: 1rem; border: none; font-size: 1rem; cursor: pointer;">Enviar Mensaje</button>
             
-            <!-- Campo Correo Electrónico -->
-            <div class="form-group">
-                <label for="email">Correo electrónico *</label>
-                <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    required
-                    aria-describedby="email-error"
-                    aria-invalid="false"
-                >
-                <div id="email-error" class="error-message" role="alert"></div>
+            </form>
+
+             <div class="hero-buttons" style="margin-top: 2rem; text-align: center;">
+                <a class="cv-download" href="index.html">Volver al Inicio</a>
             </div>
-            
-            <!-- Campo Contraseña -->
-            <div class="form-group">
-                <label for="password">Contraseña *</label>
-                <input 
-                    type="password" 
-                    id="password" 
-                    name="password" 
-                    required
-                    aria-describedby="password-error"
-                    aria-invalid="false"
-                >
-                <div id="password-error" class="error-message" role="alert"></div>
-            </div>
-            
-            <!-- Campo Confirmación de Contraseña -->
-            <div class="form-group">
-                <label for="confirmPassword">Confirmación de contraseña *</label>
-                <input 
-                    type="password" 
-                    id="confirmPassword" 
-                    name="confirmPassword" 
-                    required
-                    aria-describedby="confirmPassword-error"
-                    aria-invalid="false"
-                >
-                <div id="confirmPassword-error" class="error-message" role="alert"></div>
-            </div>
-            
-            <button type="submit">Registrarse</button>
-        </form>
-        
-        <!-- Mensaje de éxito -->
-        <div id="successMessage" class="form-success">
-            ¡Formulario enviado correctamente! Todos los datos son válidos.
-        </div>
+        </article>
     </div>
 
-    <script>
-        // ============================================
-        // FUNCIONES DE VALIDACIÓN REUTILIZABLES
-        // ============================================
-        
-        /**
-         * Valida si un campo no está vacío
-         * @param {string} value - Valor del campo
-         * @returns {boolean} - true si no está vacío, false si está vacío
-         */
-        function noEstaVacio(value) {
-            return value.trim() !== '';
-        }
-        
-        /**
-         * Valida el formato de un correo electrónico
-         * @param {string} email - Correo a validar
-         * @returns {boolean} - true si el formato es válido, false si no
-         */
-        function esCorreoValido(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        }
-        
-        /**
-         * Valida la fortaleza de una contraseña
-         * Requisitos: mínimo 8 caracteres, al menos una letra y un número
-         * @param {string} password - Contraseña a validar
-         * @returns {boolean} - true si cumple los requisitos, false si no
-         */
-        function tieneFuerzaContraseña(password) {
-            // Mínimo 8 caracteres
-            if (password.length < 8) {
-                return false;
-            }
-            
-            // Al menos una letra
-            const tieneLetra = /[a-zA-Z]/.test(password);
-            
-            // Al menos un número
-            const tieneNumero = /\d/.test(password);
-            
-            return tieneLetra && tieneNumero;
-        }
-        
-        /**
-         * Valida que dos contraseñas coincidan
-         * @param {string} password - Contraseña original
-         * @param {string} confirmPassword - Confirmación de contraseña
-         * @returns {boolean} - true si coinciden, false si no
-         */
-        function coincidenContraseñas(password, confirmPassword) {
-            return password === confirmPassword;
-        }
-        
-        // ============================================
-        // FUNCIONES DE MANEJO DE ERRORES
-        // ============================================
-        
-        /**
-         * Muestra un mensaje de error para un campo específico
-         * @param {string} fieldId - ID del campo
-         * @param {string} message - Mensaje de error a mostrar
-         */
-        function mostrarError(fieldId, message) {
-            const field = document.getElementById(fieldId);
-            const errorElement = document.getElementById(fieldId + '-error');
-            
-            // Aplicar estilos de error
-            field.classList.remove('valid');
-            field.classList.add('error');
-            field.setAttribute('aria-invalid', 'true');
-            
-            // Mostrar mensaje de error
-            errorElement.textContent = message;
-            errorElement.style.display = 'block';
-        }
-        
-        /**
-         * Limpia el error de un campo específico
-         * @param {string} fieldId - ID del campo
-         */
-        function limpiarError(fieldId) {
-            const field = document.getElementById(fieldId);
-            const errorElement = document.getElementById(fieldId + '-error');
-            
-            // Quitar estilos de error
-            field.classList.remove('error');
-            field.classList.add('valid');
-            field.setAttribute('aria-invalid', 'false');
-            
-            // Ocultar mensaje de error
-            errorElement.style.display = 'none';
-        }
-        
-        /**
-         * Valida un campo individual y muestra/oculta errores
-         * @param {string} fieldId - ID del campo a validar
-         * @returns {boolean} - true si es válido, false si no
-         */
-        function validarCampo(fieldId) {
-            const field = document.getElementById(fieldId);
-            const value = field.value;
-            let esValido = true;
-            let mensajeError = '';
-            
-            switch (fieldId) {
-                case 'nombre':
-                    if (!noEstaVacio(value)) {
-                        esValido = false;
-                        mensajeError = 'El nombre completo es obligatorio';
-                    }
-                    break;
-                    
-                case 'email':
-                    if (!noEstaVacio(value)) {
-                        esValido = false;
-                        mensajeError = 'El correo electrónico es obligatorio';
-                    } else if (!esCorreoValido(value)) {
-                        esValido = false;
-                        mensajeError = 'El formato del correo electrónico no es válido';
-                    }
-                    break;
-                    
-                case 'password':
-                    if (!noEstaVacio(value)) {
-                        esValido = false;
-                        mensajeError = 'La contraseña es obligatoria';
-                    } else if (!tieneFuerzaContraseña(value)) {
-                        esValido = false;
-                        mensajeError = 'La contraseña debe tener al menos 8 caracteres, una letra y un número';
-                    }
-                    break;
-                    
-                case 'confirmPassword':
-                    const password = document.getElementById('password').value;
-                    if (!noEstaVacio(value)) {
-                        esValido = false;
-                        mensajeError = 'La confirmación de contraseña es obligatoria';
-                    } else if (!coincidenContraseñas(password, value)) {
-                        esValido = false;
-                        mensajeError = 'Las contraseñas no coinciden';
-                    }
-                    break;
-            }
-            
-            if (esValido) {
-                limpiarError(fieldId);
-            } else {
-                mostrarError(fieldId, mensajeError);
-            }
-            
-            return esValido;
-        }
-        
-        /**
-         * Valida todo el formulario
-         * @returns {boolean} - true si todos los campos son válidos, false si hay errores
-         */
-        function validarFormulario() {
-            const campos = ['nombre', 'email', 'password', 'confirmPassword'];
-            let formularioValido = true;
-            
-            campos.forEach(campo => {
-                if (!validarCampo(campo)) {
-                    formularioValido = false;
-                }
-            });
-            
-            return formularioValido;
-        }
-        
-        /**
-         * Muestra el mensaje de éxito y oculta el formulario
-         */
-        function mostrarMensajeExito() {
-            const successMessage = document.getElementById('successMessage');
-            const form = document.getElementById('registroForm');
-            
-            form.style.display = 'none';
-            successMessage.style.display = 'block';
-        }
-        
-        // ============================================
-        // CONFIGURACIÓN DE EVENTOS DEL DOM
-        // ============================================
-        
-        // Obtener referencias a los elementos del formulario
-        const form = document.getElementById('registroForm');
-        const campos = ['nombre', 'email', 'password', 'confirmPassword'];
-        
-        // Agregar validación en tiempo real para cada campo
-        campos.forEach(campoId => {
-            const campo = document.getElementById(campoId);
-            
-            // Validar cuando el usuario sale del campo (evento 'blur')
-            campo.addEventListener('blur', function() {
-                validarCampo(campoId);
-            });
-            
-            // Validar mientras el usuario escribe (evento 'input')
-            campo.addEventListener('input', function() {
-                // Solo validar si ya hay un error para evitar mensajes prematuros
-                if (campo.classList.contains('error')) {
-                    validarCampo(campoId);
-                }
-            });
-        });
-        
-        // Validación especial para confirmación de contraseña
-        // También validar cuando cambie la contraseña original
-        document.getElementById('password').addEventListener('input', function() {
-            const confirmPassword = document.getElementById('confirmPassword');
-            if (confirmPassword.value !== '') {
-                validarCampo('confirmPassword');
-            }
-        });
-        
-        // Prevenir envío del formulario si hay errores
-        form.addEventListener('submit', function(event) {
-            // Prevenir el envío por defecto del formulario
-            event.preventDefault();
-            
-            // Validar todo el formulario
-            if (validarFormulario()) {
-                // Si todo es válido, mostrar mensaje de éxito
-                mostrarMensajeExito();
-            } else {
-                // Si hay errores, el formulario no se envía
-                // Los errores ya se muestran por las validaciones individuales
-                console.log('Formulario con errores, no se puede enviar');
-            }
-        });
-        
-        // ============================================
-        // INICIALIZACIÓN
-        // ============================================
-        
-        // Mensaje de bienvenida en consola para desarrolladores
-        console.log('Formulario de validación cargado correctamente');
-        console.log('Validaciones implementadas:');
-        console.log('- Campos obligatorios');
-        console.log('- Formato de email');
-        console.log('- Fortaleza de contraseña (8+ caracteres, letra y número)');
-        console.log('- Coincidencia de contraseñas');
-    </script>
 </body>
 </html>

@@ -9,70 +9,18 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- NAV-BAR -->
-<style>
-    .main-nav {
-        background-color: #333;
-        padding: 10px 0;
-        margin-bottom: 30px;
-        width: 100%;
-    }
-    .main-nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-    }
-    .main-nav li {
-        margin: 0 15px;
-    }
-    .main-nav a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        padding: 5px 10px;
-        border-radius: 4px;
-        transition: background-color 0.3s;
-    }
-    .main-nav a:hover, .main-nav a.active {
-        background-color: #007bff;
-    }
-    /* Estilos para el nuevo botón de contacto */
-    .hero-actions {
-        margin-top: 25px;
-    }
-    .contact-button {
-        background-color: #28a745; /* Color verde para llamar la atención */
-        color: white;
-        padding: 12px 20px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: bold;
-        display: inline-block;
-        transition: background-color 0.3s;
-        text-align: center;
-    }
-    .contact-button:hover {
-        background-color: #218838;
-    }
-</style>
-<nav class="main-nav">
-    <ul>
-        <li><a href="/index.html" class="active">Inicio</a></li>
-        <li><a href="/apps/mensajes-vue/">Ver Mensajes</a></li>
-        <li><a href="/formulario.html">Formulario JS</a></li>
-        <li><a href="/apps/contacto-php/">Contacto PHP</a></li>
-    </ul>
-</nav>
-<!-- FIN NAV-BAR -->
     <div class="container">
       <!-- Sección principal tipo CV / Portada: foto, nombre, rol y datos de contacto -->
       <section class="hero">
         <div class="hero-left">
+          <!-- En esta parte va la imagen. Recomendación: foto profesional cuadrada (400x400), fondo neutro. -->
+          <!-- Coloca la foto en assets/profile.jpg -->
           <img class="profile-pic" src="assets\Imagen de WhatsApp 2025-11-01 a las 12.14.05_4954b4e2.jpg" alt="Foto del alumno" onerror="this.onerror=null;this.src='https://via.placeholder.com/400?text=Foto'" />
-          <a class="cv-download" href="formulario.html" target="_blank" rel="noopener">Descargar CV</a>
-          <a class="cv-download" href="/apps/mensajes-vue/" rel="noopener" style="margin-top: 10px;">Gestor de Mensajes</a>
+          <div class="hero-buttons">
+            <a class="cv-download" href="#">Descargar CV</a>
+            <a class="cv-download" href="http://localhost:8000/formulario.html" target="_blank">Contacto PHP</a>
+            <a class="cv-download" href="http://localhost:8000/mensajes.php" target="_blank">Libro de Visitas</a>
+          </div>
         </div>
         <div class="hero-right">
           <h1 class="hero-name">Fansico Antonio luna marin</h1>
@@ -91,12 +39,6 @@
             <span class="skill">JavaScript</span>
             <span class="skill">Vue</span>
           </div>
-
-          <!-- BOTÓN DE CONTACTO AÑADIDO -->
-          <div class="hero-actions">
-            <a class="contact-button" href="/apps/contacto-php/">¡Contáctame ahora!</a>
-          </div>
-
         </div>
       </section>
 
@@ -129,17 +71,22 @@
         </article>
 
         <article class="card" data-category="diseño" id="card-2">
+          <!-- En esta parte va la imagen. Recomendación: mockup o vista del diseño, PNG/JPG sin texto superpuesto, contraste moderado. -->
+          <!-- Coloca la imagen en la carpeta `assets/` con nombre `proyecto2.jpg`. -->
           <img src="assets/proyecto2.jpg" alt="Proyecto 2" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x240?text=Proyecto+2'" />
           <h3>Proyecto Diseño 2</h3>
           <p>Identidad visual y branding para cliente ficticio.</p>
         </article>
 
         <article class="card" data-category="js" id="card-3">
+          <!-- En esta parte va la imagen. Recomendación: captura de la interfaz o GIF corto (si procede) mostrando interacción; si usas imagen estática, elige un frame claro. -->
+          <!-- Coloca la imagen en la carpeta `assets/` con nombre `proyecto3.jpg`. -->
           <img src="assets/proyecto3.jpg" alt="Proyecto 3" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x240?text=Proyecto+3'" />
           <h3>Proyecto JS 3</h3>
           <p>Aplicación interactiva usando Vanilla JS.</p>
         </article>
 
+        <!-- Card que lleva al formulario: abre el formulario en una nueva pestaña (registro.html) -->
         <article class="card" data-category="web" id="card-4">
           <img src="assets/formulario.jpg" alt="Formulario proyecto" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x240?text=Formulario'" />
           <h3>Proyecto: Formulario de Registro</h3>
@@ -150,17 +97,21 @@
           </div>
           <div class="project-actions">
             <a class="btn-secondary" href="#" onclick="alert('Vista previa rápida: abre formulario en nueva pestaña');return false;">Vista previa</a>
-            <a class="btn-primary" href="formulario.html" target="_blank" rel="noopener">Abrir formulario</a>
+            <a class="btn-primary" href="registro.html" target="_blank">Abrir formulario</a>
           </div>
         </article>
 
         <article class="card" data-category="diseño" id="card-5">
+          <!-- En esta parte va la imagen. Recomendación: portada o detalle editorial; formato vertical/u horizontal según composición; mantener coherencia con el resto. -->
+          <!-- Coloca la imagen en la carpeta `assets/` con nombre `proyecto5.jpg`. -->
           <img src="assets/proyecto5.jpg" alt="Proyecto 5" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x240?text=Proyecto+5'" />
           <h3>Proyecto Diseño 5</h3>
           <p>Proyecto editorial: maquetación y prototipos.</p>
         </article>
 
         <article class="card" data-category="js" id="card-6">
+          <!-- En esta parte va la imagen. Recomendación: captura del mini-juego o frame del canvas; formato PNG para claridad. -->
+          <!-- Coloca la imagen en la carpeta `assets/` con nombre `proyecto6.jpg`. -->
           <img src="assets/proyecto6.jpg" alt="Proyecto 6" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x240?text=Proyecto+6'" />
           <h3>Proyecto JS 6</h3>
           <p>Mini-juego implementado con Canvas y eventos.</p>
@@ -175,17 +126,38 @@
       <p>Alumno: Fansico Antonio luna marin.</p>
     </footer>
 
+    <!-- Vue demo: componente reusable -->
     <section class="vue-demo container">
       <h2>Demo: componente reutilizable (Vue)</h2>
       <div id="vue-app">
+        <!-- El componente se renderiza aquí -->
         <div class="vue-grid">
           <project-card v-for="(p,index) in projects" :key="index" :title="p.title" :description="p.description" :image="p.image" :accent="p.accent"></project-card>
         </div>
       </div>
     </section>
 
+  <!-- Cargar Vue desde CDN -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.prod.jpg"></script>
+  <!-- Componente Vue modular ubicado en components/project-card.js -->
   <script src="components/project-card.js"></script>
     <script src="app.js"></script>
+<script>
+  if (window.location.protocol === 'file:') {
+    const message = document.createElement('div');
+    message.style.position = 'fixed';
+    message.style.top = '0';
+    message.style.left = '0';
+    message.style.width = '100%';
+    message.style.padding = '20px';
+    message.style.backgroundColor = 'yellow';
+    message.style.color = 'black';
+    message.style.textAlign = 'center';
+    message.style.fontSize = '18px';
+    message.style.zIndex = '9999';
+    message.innerHTML = '<strong>¡Atención!</strong> Estás abriendo este archivo localmente. Para que los enlaces y el PHP funcionen, por favor, inicia el servidor con <code>php -S localhost:8000</code> y abre <a href="http://localhost:8000/index.html">http://localhost:8000/index.html</a> en tu navegador.';
+    document.body.prepend(message);
+  }
+</script>
   </body>
 </html>

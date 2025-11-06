@@ -1,3 +1,2 @@
-{"titulo":"Prueba final","contenido":"Esto es el test definitivo con curl","fecha":"2025-11-06 04:58:29"}
-{"titulo":"julio","contenido":"dsad","fecha":"2025-11-06 04:59:55"}
-{"titulo":"julio2","contenido":"kkjkjlkjkl","fecha":"2025-11-06 05:20:28"}
+{"titulo":"Mi primer mensaje","contenido":"Hola, este es el contenido de mi primer mensaje.","fecha":"2024-08-01 10:20:30"}
+{"titulo":"Otro t\u00edtulo","contenido":"Este es otro mensaje para el blog.","fecha":"2024-08-01 10:20:31"}
