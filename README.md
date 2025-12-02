@@ -253,9 +253,13 @@ Una vez que la configuración técnica está completa, cualquier usuario puede a
     -   Rellene los campos del formulario: **Título, Descripción, URL de la Imagen y Categoría**.
     -   Haga clic en "Guardar". El nuevo proyecto aparecerá en la tabla sin recargar la página.
 4.  **Editar un Proyecto:**
+
     -   Haga clic en el botón "Editar" de la fila que desea modificar.
     -   Los datos del proyecto se cargarán en el formulario en la parte superior de la página.
     -   Modifique la información y haga clic en "Guardar" para aplicar los cambios.
 5.  **Eliminar un Proyecto:**
     -   Haga clic en el botón "Eliminar" en la fila del proyecto que desea borrar.
     -   Confirme la acción en el diálogo de alerta. El proyecto será eliminado permanentemente.
+
+
+#Despliege
