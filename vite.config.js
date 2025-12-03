@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react-swc'
 
 export default defineConfig({
   plugins: [react()],
-  base: "/Formulario/",
+  base: "/portafolio/",
   server: {
     proxy: {
       // Redirige las llamadas a la API de publicaciones al servidor PHP
