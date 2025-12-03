@@ -1,108 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Galería / Proyectos destacados</title>
- 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="container">
-      <section class="hero">
-        <div class="hero-left">
-          <img class="profile-pic" src="assets/Imagen de WhatsApp 2025-11-01 a las 12.14.05_4954b4e2.jpg" alt="Foto del alumno" onerror="this.onerror=null;this.src='https://via.placeholder.com/400?text=Foto';">
-          <div class="hero-buttons">
-            <a class="cv-download" href="#">Descargar CV</a>
-            <a class="btn-primary" href="http://localhost:8000/formulario.html" target="_blank">Contacto (PHP)</a>
-            <a class="btn-primary" href="http://localhost:8000/mensajes.php" target="_blank">Libro de Visitas</a>
-            <a class="btn-primary" href="gestion.html" target="_blank">Gestionar Publicaciones</a>
-          </div>
-        </div>
-        <div class="hero-right">
-          <h1 class="hero-name">Fansico Antonio luna marin</h1>
-          <p class="hero-role">Desarrollador Web / Diseñador UI — Portafolio Profesional</p>
-          <p class="hero-summary">Breve presentación: Soy un desarrollador front-end con experiencia en HTML, CSS y JavaScript. Me enfoco en crear interfaces accesibles, responsivas y con buen rendimiento.</p>
 
-          <div class="contact-list">
-            <span class="contact-item">📍 Xalapa.ver Mexxico</span>
-            <span class="contact-item">✉️ luna_marin@gmail.com</span>
-            <span class="contact-item">🔗 linkedin.com</span>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Portafolio Profesional</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
 
-          <div class="skills">
-            <span class="skill">HTML</span>
-            <span class="skill">CSS</span>
-            <span class="skill">JavaScript</span>
-            <span class="skill">Vue</span>
-          </div>
-        </div>
-      </section>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
 
-      <header class="site-header">
-        <p class="lead">Galería — Proyectos destacados</p>
-        <p>Ejemplo de manipulación del DOM con JavaScript (sin recargar la página).</p>
-      </header>
-
-    <section class="controls">
-      <div class="filter-group">
-        <button class="filter-btn" data-filter="all">Todos</button>
-        <button class="filter-btn" data-filter="web">Web</button>
-        <button class="filter-btn" data-filter="diseño">Diseño</button>
-        <button class="filter-btn" data-filter="js">JavaScript</button>
-      </div>
-
-      <div class="actions">
-        <button id="toggle-js">Ocultar/Mostrar categoría "JavaScript"</button>
-        <button id="edit-card">Cambiar primera tarjeta (texto + imagen)</button>
-      </div>
-    </section>
-    <main>
-      <section id="gallery" class="gallery">
-        <!-- Este contenido será reemplazado dinámicamente por publicaciones.js -->
-        <p>Cargando proyectos...</p>
-      </section>
-      
-    </main>
-
-    </div>
-
-    <footer>
-      <p>Alumno: Fansico Antonio luna marin.</p>
-    </footer>
-
-    <section class="vue-demo container">
-      <h2>Demo: componente reutilizable (Vue)</h2>
-      <div id="vue-app">
-        <!-- El contenido de esta sección es generado dinámicamente por components/project-card.js -->
-      </div>
-    </section>
-
-  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-  <!-- Este script SÍ contiene un sistema Vue completo y auto-contenido -->
-  <script src="components/project-card.js"></script>
-  <!-- Este script ahora solo se ocupa de la galería principal y sus controles -->
-  <script src="app.js"></script>
-  <!-- Este es el nuevo script que carga las publicaciones dinámicamente -->
-  <script src="publicaciones.js"></script>
-
-<script>
-  if (window.location.protocol === 'file:') {
-    const message = document.createElement('div');
-    message.style.position = 'fixed';
-    message.style.top = '0';
-    message.style.left = '0';
-    message.style.width = '100%';
-    message.style.padding = '20px';
-    message.style.backgroundColor = 'yellow';
-    message.style.color = 'black';
-    message.style.textAlign = 'center';
-    message.style.fontSize = '18px';
-    message.style.zIndex = '9999';
-    message.innerHTML = '<strong>¡Atención!</strong> Estás abriendo este archivo localmente. Para que los enlaces y el PHP funcionen, por favor, inicia el servidor con <code>php -S localhost:8000</code> y abre <a href="http://localhost:8000/index.html">http://localhost:8000/index.html</a> en tu navegador.';
-    document.body.prepend(message);
-  }
-</script>
-  </body>
 </html>
