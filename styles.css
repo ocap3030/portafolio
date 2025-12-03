@@ -56,10 +56,169 @@ body{
 
 footer{margin-top:24px;color:var(--muted)}
 
-@media (max-width:420px){
-  .controls{flex-direction:column;align-items:stretch}
-  .actions{justify-content:space-between}
+
+/* ========================================
+   RESPONSIVE DESIGN - Mobile First
+   ======================================== */
+
+/* Mobile devices (up to 768px) */
+@media (max-width: 768px) {
+  body {
+    padding: 12px;
+  }
+  
+  .container {
+    padding: 12px;
+  }
+  
+  /* Hero section - stack vertically on mobile */
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    text-align: center;
+  }
+  
+  .hero-left {
+    align-items: center;
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .hero-buttons {
+    padding: 0;
+    width: 100%;
+  }
+  
+  .hero-right {
+    text-align: center;
+  }
+  
+  .hero-name {
+    font-size: 1.4rem;
+  }
+  
+  .hero-role {
+    font-size: 0.95rem;
+  }
+  
+  .hero-summary {
+    font-size: 0.9rem;
+  }
+  
+  /* Contact list - stack vertically on small screens */
+  .contact-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-item {
+    width: 100%;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+  
+  /* Skills - center on mobile */
+  .skills {
+    justify-content: center;
+  }
+  
+  /* Controls - stack vertically */
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  
+  .filter-group {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .filter-btn {
+    flex: 1;
+    min-width: 80px;
+  }
+  
+  .actions {
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  #toggle-js, #edit-card {
+    flex: 1;
+    font-size: 0.9rem;
+    padding: 10px 8px;
+  }
+  
+  /* Gallery - single column on very small screens */
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }
+
+/* Small mobile devices (up to 420px) */
+@media (max-width: 420px) {
+  .hero-name {
+    font-size: 1.2rem;
+  }
+  
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .filter-btn {
+    font-size: 0.85rem;
+    padding: 8px 10px;
+  }
+  
+  .contact-item {
+    font-size: 0.8rem;
+    padding: 5px 8px;
+  }
+}
+
+/* Tablet devices (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 180px 1fr;
+    gap: 18px;
+  }
+  
+  .profile-pic {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .hero-name {
+    font-size: 1.6rem;
+  }
+  
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+/* Large screens (1025px and up) */
+@media (min-width: 1025px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+/* Ensure contact list wraps nicely on all screens */
+@media (min-width: 769px) {
+  .contact-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
+
 
 /* Estilos del formulario dentro de una card */
 .card .card-form{padding:14px;border-top:1px solid rgba(6,24,44,0.04);background:linear-gradient(180deg,transparent,rgba(255,255,255,0.6))}

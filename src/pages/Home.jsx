@@ -78,6 +78,13 @@ export default function Home() {
                         Breve presentación: Soy un desarrollador front-end con experiencia en HTML,
                         CSS y JavaScript. Me enfoco en crear interfaces accesibles, responsivas
                     </p>
+                    <div className="contact-list">
+                        <span className="contact-item">✉️ luna_marin@gmail.com</span>
+                        <span className="contact-item">📞 +52 1 55 1234 5678</span>
+                        <span className="contact-item">📍 México, CDMX</span>
+                        <span className="contact-item">🔗 linkedin.com</span>
+                        <span className="contact-item">🔗 github.com</span>
+                    </div>
                     <div className="skills">
                         <span className="skill">React</span>
                         <span className="skill">PHP</span>
